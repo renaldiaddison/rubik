@@ -1,5 +1,5 @@
-import * as THREE from 'three'
-import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js'
+import * as THREE from './three.js/build/three.module.js'
+import { OrbitControls } from './three.js/examples/jsm/controls/OrbitControls.js'
 
 var scene, camera, renderer, controls, cube
 
@@ -114,8 +114,8 @@ function init() {
 function render() {
   requestAnimationFrame(render)
   controls.update()
-  cube.rotation.x += 0.01
-  cube.rotation.y += 0.01
+  cube.rotation.x += 0.03
+  cube.rotation.y += 0.03
   renderer.render(scene, camera)
 }
 
